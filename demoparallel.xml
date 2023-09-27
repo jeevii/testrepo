@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Suite" verbose="2">
+<!-- <test name="Test">
+	  <!<groups>
+		  <run>
+			  <exclude name="yahoo"></exclude> 
+			  
+		  </run>
+		  
+	  </groups>-->
+	  <!--
+	  <parameter name="Name" value="Simba"></parameter>-->
+    <!--<classes>
+      <class name="testNGBasic.FindElements"/>
+      <class name="testNGBasic.WindowHandles"/>-->
+      <!--<class name="testNGBasic.BeforeAfterSuite"></class>-->
+      <!--<class name="testNGBasic.Parameterization"></class>
+      </classes>!>
+   
+-->  <test name="BothCorrect">
+	  <parameter name="uName" value="Admin"></parameter>
+	  <parameter name="pWord" value="admin123"></parameter>
+	  <classes>
+		  <class name="dataDriven.BothCorrect"/>
+		  </classes>
+	  </test>
+	  <test name="BothInCorrect">
+		  <parameter name="Uname" value="Admin1"></parameter>
+	  <parameter name="Pword" value="admin13"></parameter>
+		  <classes>
+			  <class name="dataDriven.BothInCorrect"></class>
+		  </classes>
+	  </test>
+	   
+	  <test name="CorrectUserName">
+		  <parameter name="Uname" value="Admin"></parameter>
+	  <parameter name="Pword" value="admin13"></parameter>
+		  <classes>
+			  <class name="dataDriven.CorrectUserName"></class>
+		  </classes>
+	  </test>
+	  <test name="CorrectPassword">
+		  <parameter name="Uname" value="Admin1"></parameter>
+	  <parameter name="Pword" value="admin123"></parameter>
+		  <classes>
+			  <class name="dataDriven.CorrectPassword"></class>
+		  </classes>
+	  </test>
+</suite>
