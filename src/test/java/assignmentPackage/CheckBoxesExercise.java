@@ -32,6 +32,7 @@ public class CheckBoxesExercise {
 		chck1.click();
 		System.out.println(chck1.isSelected());
 		//Assert.assertFalse((chck1).isSelected());
+		System.out.println("test");
 		
 		System.out.println(driver.findElements(By.cssSelector("input[type=\"checkbox\"]")).size());
 		driver.quit();

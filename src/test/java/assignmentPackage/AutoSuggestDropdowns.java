@@ -21,6 +21,7 @@ public class AutoSuggestDropdowns {
 		driver.navigate().to("https://rahulshettyacademy.com/AutomationPractice/");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.id("autocomplete")).sendKeys("Ind");
+		System.out.println("test");
 		List <WebElement> suggestions= driver.findElements(By.xpath("(//li[@class='ui-menu-item'])"));
 		
 		for(WebElement pick :suggestions) {
